@@ -54,3 +54,5 @@ r.send(av+'\n')
 result = r.recv().decode()
 flag = re.findall(r'picoCTF{.*}',result)[0]
 print(f'flag is : {flag}')
+
+r.close()
