@@ -17,7 +17,6 @@ for i in range(10):
     src_ips.append(json_file['tickets'][i]['src_ip'])
     hashes.add(json_file['tickets'][i]['file_hash'])
 most_common_src_ip = max(src_ips, key=src_ips.count)
-#print('Most common source IP is :',most_common_src_ip)
 
 print(r.recv().decode())
 r.send(most_common_src_ip+'\n')
